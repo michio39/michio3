@@ -344,12 +344,33 @@ img {
   padding-top: 20px;
 }
 
+.section--photo {
+  padding-top: 32px;
+}
+
 .area,
 .contact {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
   align-items: center;
+}
+
+.photo-card {
+  width: min(100%, 320px);
+  margin: 0 auto;
+  padding: 18px;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.photo-card img {
+  width: 100%;
+  aspect-ratio: 111 / 167;
+  object-fit: cover;
+  border-radius: 22px;
 }
 
 .contact__panel {
