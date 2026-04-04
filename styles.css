@@ -387,6 +387,175 @@ img {
   padding-top: 20px;
 }
 
+.section--calendar {
+  background:
+    radial-gradient(circle at top right, rgba(169, 201, 122, 0.14), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(243, 247, 229, 0.72));
+}
+
+.calendar__lead {
+  max-width: 760px;
+  margin: 14px auto 0;
+  color: var(--muted);
+}
+
+.calendar-card {
+  padding: 30px;
+  border-radius: calc(var(--radius-lg) + 4px);
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+}
+
+.calendar-card__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: end;
+  margin-bottom: 18px;
+}
+
+.calendar-card__eyebrow {
+  margin: 0 0 6px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.74rem;
+  color: var(--primary-deep);
+  font-weight: 700;
+}
+
+.calendar-card__header h3 {
+  margin: 0;
+  font-size: clamp(1.5rem, 2.6vw, 2.35rem);
+}
+
+.calendar-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.calendar-nav {
+  min-height: 46px;
+  padding: 0 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 253, 236, 0.92);
+  color: var(--text);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.calendar-nav:hover {
+  transform: translateY(-2px);
+  background: rgba(243, 233, 168, 0.75);
+}
+
+.calendar-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  margin-bottom: 18px;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.calendar-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.calendar-legend__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(41, 49, 38, 0.08);
+}
+
+.calendar-legend__dot--open {
+  background: rgba(169, 201, 122, 0.95);
+}
+
+.calendar-legend__dot--limited {
+  background: rgba(243, 233, 168, 0.95);
+}
+
+.calendar-legend__dot--closed {
+  background: rgba(224, 210, 195, 0.95);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.calendar-grid__weekday,
+.calendar-day {
+  border-radius: 20px;
+}
+
+.calendar-grid__weekday {
+  padding: 12px 8px;
+  text-align: center;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--primary-deep);
+  background: rgba(243, 233, 168, 0.38);
+}
+
+.calendar-day {
+  min-height: 106px;
+  padding: 14px 14px 12px;
+  border: 1px solid rgba(74, 102, 63, 0.1);
+  background: rgba(255, 255, 255, 0.88);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.calendar-day.is-open {
+  background: linear-gradient(180deg, rgba(248, 252, 239, 0.96), rgba(237, 246, 221, 0.96));
+}
+
+.calendar-day.is-limited {
+  background: linear-gradient(180deg, rgba(255, 250, 231, 0.98), rgba(249, 240, 191, 0.9));
+}
+
+.calendar-day.is-closed {
+  background: linear-gradient(180deg, rgba(245, 240, 234, 0.98), rgba(232, 223, 213, 0.92));
+}
+
+.calendar-day.is-muted {
+  opacity: 0.45;
+}
+
+.calendar-day.is-today {
+  border-color: rgba(110, 139, 77, 0.55);
+  box-shadow: inset 0 0 0 1px rgba(110, 139, 77, 0.24);
+}
+
+.calendar-day__date {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.calendar-day__status {
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+
+.calendar-card__note {
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
 .area,
 .contact {
   display: grid;
@@ -466,6 +635,11 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .calendar-card__header {
+    align-items: start;
+    flex-direction: column;
+  }
+
   .hero__visual {
     justify-items: center;
   }
@@ -489,12 +663,42 @@ img {
   .service-card,
   .reason-item,
   .flow-step,
-  .contact__panel {
+  .contact__panel,
+  .calendar-card {
     padding: 22px;
     border-radius: 24px;
   }
 
+  .calendar-grid {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .calendar-grid__weekday {
+    padding: 8px 4px;
+    font-size: 0.75rem;
+  }
+
+  .calendar-day {
+    min-height: 72px;
+    padding: 10px 6px 8px;
+    border-radius: 16px;
+    gap: 6px;
+  }
+
+  .calendar-day__date {
+    font-size: 0.98rem;
+  }
+
+  .calendar-day__status {
+    display: none;
+  }
+
   .button {
+    width: 100%;
+  }
+
+  .calendar-nav {
     width: 100%;
   }
 }
