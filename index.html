@@ -8,7 +8,30 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="hero">
+  <nav class="side-menu" aria-label="ページ内メニュー">
+    <a class="side-menu__brand" href="#top">
+      <span class="side-menu__brand-mark">HEART</span>
+      <strong>便利センター</strong>
+    </a>
+    <figure class="side-menu__visual" aria-hidden="true">
+      <div class="side-menu__visual-pattern">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </figure>
+    <div class="side-menu__links">
+      <a href="#top">トップ</a>
+      <a href="#problems">お悩み</a>
+      <a href="#services">サービス</a>
+      <a href="#reasons">選ばれる理由</a>
+      <a href="#flow">流れ</a>
+      <a href="#area">エリア</a>
+      <a href="#calendar">営業日</a>
+      <a href="#contact">相談</a>
+    </div>
+  </nav>
+  <header class="hero" id="top">
     <div class="hero__bg"></div>
     <div class="container hero__inner">
       <div class="hero__content">
@@ -56,7 +79,7 @@
   </header>
 
   <main>
-    <section class="section section--problem">
+    <section class="section section--problem" id="problems">
       <div class="container">
         <div class="section__heading">
           <p class="section__label">こんなお悩みに</p>
@@ -117,7 +140,7 @@
       </div>
     </section>
 
-    <section class="section section--reasons">
+    <section class="section section--reasons" id="reasons">
       <div class="container reasons">
         <div class="section__heading section__heading--left">
           <p class="section__label">Why Choose Us</p>
@@ -144,7 +167,7 @@
       </div>
     </section>
 
-    <section class="section section--flow">
+    <section class="section section--flow" id="flow">
       <div class="container">
         <div class="section__heading">
           <p class="section__label">Flow</p>
@@ -170,7 +193,7 @@
       </div>
     </section>
 
-    <section class="section section--area">
+    <section class="section section--area" id="area">
       <div class="container area">
         <div>
           <p class="section__label">Area</p>
