@@ -28,13 +28,21 @@
       <a href="#flow">流れ</a>
       <a href="#area">エリア</a>
       <a href="#calendar">営業日</a>
+      <a href="#game">ゲーム</a>
       <a href="#contact">相談</a>
     </div>
   </nav>
   <header class="hero" id="top">
     <div class="hero__bg"></div>
+    <div class="hero__orb hero__orb--one" aria-hidden="true"></div>
+    <div class="hero__orb hero__orb--two" aria-hidden="true"></div>
     <div class="container hero__inner">
       <div class="hero__content">
+        <div class="hero__chips" aria-label="特徴">
+          <span>即相談</span>
+          <span>地域密着</span>
+          <span>まとめて対応</span>
+        </div>
         <div class="hero__brand-lockup">
           <p class="hero__brand-script">Step Heart</p>
           <p class="hero__brand-jp">ステップハート</p>
@@ -239,6 +247,62 @@
       </div>
     </section>
 
+    <section class="section section--game" id="game">
+      <div class="container">
+        <div class="section__heading">
+          <p class="section__label">Game</p>
+          <h2>ちょっと遊べる、現場レスキューミニゲーム。</h2>
+          <p class="calendar__lead">
+            落ちてくる困りごとを素早く回収する1分ゲームです。キーボードでもタッチでも操作できます。
+          </p>
+        </div>
+        <div class="game-panel">
+          <div class="game-panel__info">
+            <div class="game-badges" aria-label="ゲーム情報">
+              <span>矢印キー / WASD</span>
+              <span>スマホ操作対応</span>
+              <span>60秒チャレンジ</span>
+            </div>
+            <div class="game-stats">
+              <article class="game-stat">
+                <span>Score</span>
+                <strong id="game-score">0</strong>
+              </article>
+              <article class="game-stat">
+                <span>Time</span>
+                <strong id="game-time">60</strong>
+              </article>
+              <article class="game-stat">
+                <span>Best</span>
+                <strong id="game-best">0</strong>
+              </article>
+            </div>
+            <div class="game-actions">
+              <button class="button button--primary" type="button" id="game-start">ゲーム開始</button>
+              <button class="button button--ghost" type="button" id="game-restart" hidden>もう一度</button>
+            </div>
+            <p class="game-message" id="game-message">
+              ハートを動かして依頼カードを回収。黒いトラブルにぶつかると終了です。
+            </p>
+          </div>
+          <div class="game-panel__play">
+            <div class="game-stage">
+              <canvas id="service-game" width="720" height="460" aria-label="便利センターのミニゲーム"></canvas>
+            </div>
+            <div class="game-pad" aria-label="タッチ操作">
+              <button class="game-pad__button" type="button" data-game-dir="up">▲</button>
+              <div class="game-pad__row">
+                <button class="game-pad__button" type="button" data-game-dir="left">◀</button>
+                <button class="game-pad__button game-pad__button--accent" type="button" data-game-dir="boost">●</button>
+                <button class="game-pad__button" type="button" data-game-dir="right">▶</button>
+              </div>
+              <button class="game-pad__button" type="button" data-game-dir="down">▼</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section section--contact" id="contact">
       <div class="container contact">
         <div>
@@ -251,6 +315,7 @@
         </div>
         <div class="contact__panel">
           <p class="contact__copy">無料相談受付中</p>
+          <p class="contact__subcopy">草刈りから片付けまで、まずは一言ください。</p>
           <div class="contact__placeholder">電話番号・LINE・フォームURLをここに設置</div>
           <p class="contact__note">実際の電話番号、LINE導線、問い合わせフォームURLがあればすぐ差し替えできます。</p>
         </div>
@@ -383,6 +448,7 @@
       renderCalendar();
     })();
   </script>
+  <script src="game.js"></script>
 </body>
 </html>
 
