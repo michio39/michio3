@@ -36,6 +36,11 @@
     <div class="hero__bg"></div>
     <div class="hero__orb hero__orb--one" aria-hidden="true"></div>
     <div class="hero__orb hero__orb--two" aria-hidden="true"></div>
+    <div class="hero__ribbons" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <div class="container hero__inner">
       <div class="hero__content">
         <div class="hero__chips" aria-label="特徴">
@@ -74,6 +79,54 @@
         </dl>
       </div>
       <div class="hero__visual">
+        <figure class="hero__codex">
+          <svg viewBox="0 0 320 280" role="img" aria-label="サンライズリボン調のCodexイラスト">
+            <defs>
+              <linearGradient id="codexSky" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#fff8ef"></stop>
+                <stop offset="42%" stop-color="#ffd7b5"></stop>
+                <stop offset="78%" stop-color="#ff9d75"></stop>
+                <stop offset="100%" stop-color="#ef6f8f"></stop>
+              </linearGradient>
+              <linearGradient id="codexRibbonA" x1="0%" y1="50%" x2="100%" y2="50%">
+                <stop offset="0%" stop-color="#fff2cd" stop-opacity="0"></stop>
+                <stop offset="28%" stop-color="#ffe2a6"></stop>
+                <stop offset="68%" stop-color="#ff8d67"></stop>
+                <stop offset="100%" stop-color="#fff2cd" stop-opacity="0"></stop>
+              </linearGradient>
+              <linearGradient id="codexRibbonB" x1="0%" y1="50%" x2="100%" y2="50%">
+                <stop offset="0%" stop-color="#fff4d8" stop-opacity="0"></stop>
+                <stop offset="26%" stop-color="#ffd7a2"></stop>
+                <stop offset="64%" stop-color="#ef6f8f"></stop>
+                <stop offset="88%" stop-color="#9fd0ff"></stop>
+                <stop offset="100%" stop-color="#fff4d8" stop-opacity="0"></stop>
+              </linearGradient>
+              <linearGradient id="codexCore" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#fff8ef"></stop>
+                <stop offset="100%" stop-color="#fff0de"></stop>
+              </linearGradient>
+            </defs>
+            <rect x="16" y="18" width="288" height="244" rx="32" fill="url(#codexSky)"></rect>
+            <circle cx="84" cy="74" r="28" fill="#fff2cd" opacity="0.95"></circle>
+            <path d="M28 88C76 70 122 62 196 74C246 82 281 103 306 123" stroke="url(#codexRibbonA)" stroke-width="22" stroke-linecap="round" fill="none"></path>
+            <path d="M94 189C132 146 184 120 282 112" stroke="url(#codexRibbonB)" stroke-width="18" stroke-linecap="round" fill="none"></path>
+            <path d="M72 205C106 178 142 165 194 160" stroke="url(#codexRibbonA)" stroke-width="12" stroke-linecap="round" fill="none" opacity="0.92"></path>
+            <rect x="86" y="100" width="148" height="110" rx="34" fill="url(#codexCore)" stroke="rgba(138,67,50,0.18)"></rect>
+            <circle cx="138" cy="146" r="11" fill="#8a4332"></circle>
+            <circle cx="182" cy="146" r="11" fill="#8a4332"></circle>
+            <path d="M126 178C139 192 182 192 195 178" stroke="#8a4332" stroke-width="8" stroke-linecap="round" fill="none"></path>
+            <path d="M112 96L136 72" stroke="#8a4332" stroke-width="8" stroke-linecap="round"></path>
+            <path d="M208 96L184 72" stroke="#8a4332" stroke-width="8" stroke-linecap="round"></path>
+            <circle cx="136" cy="72" r="10" fill="#ffb95d"></circle>
+            <circle cx="184" cy="72" r="10" fill="#ef6f8f"></circle>
+            <rect x="105" y="220" width="110" height="24" rx="12" fill="#fff7ec" opacity="0.84"></rect>
+            <text x="160" y="237" text-anchor="middle" font-size="18" font-weight="700" fill="#8a4332" font-family="Segoe UI, Yu Gothic, sans-serif">CODEX</text>
+          </svg>
+          <figcaption>
+            <span>Sunrise Ribbon</span>
+            <strong>Codex Illustration</strong>
+          </figcaption>
+        </figure>
         <figure class="hero__president">
           <img src="niguma.jpg" alt="社長の写真">
           <figcaption>
